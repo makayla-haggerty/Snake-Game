@@ -95,12 +95,14 @@ $(document).ready(function(){
 		}
 		$('#highscore').html('High Score: ' + localStorage.highscore);
 	}
+	//colors the cells of the snake and food
 	function paint_cell(x, y){
 		ctx.fillStyle = color;
 		ctx.fillRect(x * cw, y * cw, cw, cw);
 		ctx.strokeStyle = "white";
 		ctx.strokeRect(x * cw, y * cw, cw, cw);
 	}
+	//checks for collision
 	function check_collision(x, y, array){
 		console.log("Collision check.");
 		for(var i = 0; i < array.length; i++){
@@ -118,6 +120,7 @@ $(document).ready(function(){
 		else if(key == 40 && d != "up") d = "down";
 	});
 });
+//resets the score to 0
 function resetScore(){
 	localStorage.highscore = 0;
 	var highscorediv = document.getElementById('highscore');
