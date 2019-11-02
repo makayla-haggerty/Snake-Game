@@ -1,3 +1,4 @@
+//Made by Makayla Haggerty
 $(document).ready(function(){
 	//define vars
 	var canvas = $('#canvas')[0];
